@@ -1,5 +1,6 @@
 import * as $ from 'jquery';
 import { expect } from 'chai';
+import * as sinon from 'sinon';
 
 import { movieDataService, Movie } from '../src/MovieDataService';
 

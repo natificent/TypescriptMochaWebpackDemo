@@ -1,10 +1,11 @@
 import MoviesViewModel from '../src/MoviesViewModel';
 import { movieDataService, Movie } from '../src/MovieDataService'
 import { expect } from 'chai';
+import * as sinon from 'sinon';
 
 describe('MoviesViewModel', () => {
   let viewModel: MoviesViewModel;
-  let movieDataServiceStub: Sinon.SinonSpy;
+  let movieDataServiceStub: sinon.SinonSpy;
   beforeEach(() => {
     sinon.stub(movieDataService, 'loadMovies').returns([new Movie('The Matrix', 1998, 5)]);
     movieDataServiceStub = sinon.spy(movieDataService, 'save');
